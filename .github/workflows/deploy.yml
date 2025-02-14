@@ -16,8 +16,8 @@ jobs:
     - name: Deploy to SiteGround
       env:
         SITEGROUND_SSH_KEY: ${{ secrets.SITEGROUND_SSH_KEY }}
-        SITEGROUND_USER: yourusername
-        SITEGROUND_HOST: yourserver.com
+        SITEGROUND_USER: u1996-mgm3tmy4drfs
+        SITEGROUND_HOST: gcam1014.siteground.biz
       run: |
         mkdir -p ~/.ssh
         echo "$SITEGROUND_SSH_KEY" > ~/.ssh/id_rsa
