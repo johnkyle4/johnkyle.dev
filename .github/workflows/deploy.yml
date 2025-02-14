@@ -3,7 +3,7 @@ name: Deploy to SiteGround
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -22,4 +22,4 @@ jobs:
         mkdir -p ~/.ssh
         echo "$SITEGROUND_SSH_KEY" > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh -o StrictHostKeyChecking=no $SITEGROUND_USER@$SITEGROUND_HOST "cd /www/johnkyle.dev/public_html && git pull origin master"
+        ssh -o StrictHostKeyChecking=no $SITEGROUND_USER@$SITEGROUND_HOST "cd /www/johnkyle.dev/public_html && git pull origin main"
