@@ -13,13 +13,31 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Deploy to SiteGround
+    - name: Setup SSH and Deploy
       env:
         SITEGROUND_SSH_KEY: ${{ secrets.SITEGROUND_SSH_KEY }}
         SITEGROUND_USER: u1996-mgm3tmy4drfs
         SITEGROUND_HOST: gcam1014.siteground.biz
+        SSH_PORT: 18765
       run: |
+        # Ensure SSH directory exists
         mkdir -p ~/.ssh
-        echo "$SITEGROUND_SSH_KEY" > ~/.ssh/id_rsa
+        chmod 700 ~/.ssh
+
+        # Fix GitHub Secret formatting issue (restores newlines)
+        echo "$SITEGROUND_SSH_KEY" | tr -d '\r' > ~/.ssh/id_rsa
         chmod 600 ~/.ssh/id_rsa
-        ssh -o StrictHostKeyChecking=no $SITEGROUND_USER@$SITEGROUND_HOST -p 18765 "cd /www/johnkyle.dev/public_html && git pull origin main"
+
+        # Add SiteGround to known hosts to prevent interactive prompt
+        ssh-keyscan -p $SSH_PORT $SITEGROUND_HOST >> ~/.ssh/known_hosts
+
+        # Test SSH Connection (Optional Debugging Step)
+        ssh -p $SSH_PORT -o StrictHostKeyChecking=no $SITEGROUND_USER@$SITEGROUND_HOST "echo 'SSH Connection Successful'"
+
+        # Navigate to SiteGround project directory and pull latest changes
+        ssh -p $SSH_PORT $SITEGROUND_USER@$SITEGROUND_HOST << EOF
+          cd /www/johnkyle.dev/public_html
+          git reset --hard  # Ensure clean working directory
+          git pull origin main
+          exit
+        EOF
