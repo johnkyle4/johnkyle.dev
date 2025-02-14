@@ -1,0 +1,25 @@
+name: Deploy to SiteGround
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Deploy to SiteGround
+      env:
+        SITEGROUND_SSH_KEY: ${{ secrets.SITEGROUND_SSH_KEY }}
+        SITEGROUND_USER: yourusername
+        SITEGROUND_HOST: yourserver.com
+      run: |
+        mkdir -p ~/.ssh
+        echo "$SITEGROUND_SSH_KEY" > ~/.ssh/id_rsa
+        chmod 600 ~/.ssh/id_rsa
+        ssh -o StrictHostKeyChecking=no $SITEGROUND_USER@$SITEGROUND_HOST "cd /home/$SITEGROUND_USER/public_html && git pull origin master"
