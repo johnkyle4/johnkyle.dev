@@ -36,7 +36,7 @@ jobs:
 
         # Navigate to SiteGround project directory and pull latest changes
         ssh -p $SSH_PORT $SITEGROUND_USER@$SITEGROUND_HOST << EOF
-          cd /www/johnkyle.dev/public_html
+          cd www/johnkyle.dev/public_html
           git reset --hard  # Ensure clean working directory
           git pull origin main
           exit
