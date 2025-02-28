@@ -6,55 +6,60 @@
     <title>John Kyle - WordPress Administrator</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #121212;
+            background-color: #1a1a1a;
             color: #e0e0e0;
+            line-height: 1.6;
         }
         header {
-            background: #1e1e1e;
+            background: linear-gradient(135deg, #333, #111);
             color: #fff;
-            padding: 20px;
+            padding: 40px;
             text-align: center;
+            font-size: 1.5em;
         }
         section {
             max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background: #1e1e1e;
-            box-shadow: 0 0 10px rgba(255,255,255,0.1);
-            border-radius: 5px;
+            margin: 40px auto;
+            padding: 30px;
+            background: #222;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
         }
         h1, h2 {
-            color: #ffffff;
+            color: #76c7c0;
+            text-align: center;
         }
-        .skills ul, .projects ul {
+        ul {
             list-style: none;
             padding: 0;
         }
-        .skills li, .projects li {
-            background: #2a2a2a;
-            margin: 5px 0;
-            padding: 10px;
+        li {
+            background: #333;
+            margin: 8px 0;
+            padding: 12px;
             border-radius: 5px;
+            transition: 0.3s;
         }
-        .projects a {
-            color: #ffffff;
-            text-decoration: none;
+        li:hover {
+            background: #444;
         }
-        .projects a:hover {
-            text-decoration: underline;
-        }
-        .contact a {
+        .projects a, .contact a {
             color: #76c7c0;
             text-decoration: none;
+            font-weight: bold;
+        }
+        .projects a:hover, .contact a:hover {
+            text-decoration: underline;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: #1e1e1e;
-            color: white;
+            background: #111;
+            color: #ccc;
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -66,9 +71,8 @@
     
     <section class="about">
         <h2>About Me</h2>
-        <p>WordPress expert with a proven track record of installing, managing, customizing, and troubleshooting sites remotely.
-            Specializing in hosting setups, DNS configuration, SSH tasks, and keeping WordPress environments fast and secure.
-            Committed to delivering high-quality results while fostering strong communication and collaboration with teams and clients.</p>
+        <p>Experienced WordPress Administrator specializing in hosting setups, DNS configuration, SSH tasks, and optimizing performance.
+            Passionate about delivering high-quality solutions while collaborating effectively with teams and clients.</p>
     </section>
 
     <section class="skills">
@@ -88,39 +92,56 @@
         </ul>
     </section>
 
+    <section class="experience">
+        <h2>Experience</h2>
+        <p><strong>WordPress Administrator (Freelance)</strong> | Self-Employed | Remote (2016–Present)</p>
+        <ul>
+            <li>Managed 20+ WordPress sites, ensuring top-tier security and performance.</li>
+            <li>Implemented DNS and hosting configurations, reducing load times by 20%.</li>
+            <li>Executed seamless site migrations with zero downtime.</li>
+            <li>Developed Git-based workflows for efficient team collaboration.</li>
+        </ul>
+        <p><strong>Web Administrator & Developer</strong> | University of New England (2015–2016)</p>
+        <ul>
+            <li>Maintained the university’s WordPress and Drupal sites.</li>
+            <li>Optimized workflows, reducing content update times by 25%.</li>
+        </ul>
+        <p><strong>Web Project Manager & Developer</strong> | ARAS (2012–2015)</p>
+        <ul>
+            <li>Migrated legacy site to Drupal, modernizing content management.</li>
+            <li>Managed hosting configurations, ensuring 100% uptime.</li>
+        </ul>
+    </section>
+
     <section class="projects">
         <h2>Projects</h2>
         <ul>
             <li>
                 <a href="https://www.17miledrivingschool.com" target="_blank">17-Mile Driving School</a>
                 <ul>
-                    <li>Redesigned and optimized WordPress site for improved user experience.</li>
-                    <li>Integrated an online booking system, increasing class sign-ups by 30%.</li>
-                    <li>Implemented SEO strategies, boosting organic traffic by 40%.</li>
+                    <li>Optimized site performance and UX.</li>
+                    <li>Integrated booking system, increasing sign-ups.</li>
                 </ul>
             </li>
             <li>
                 <a href="https://aras.org" target="_blank">The Archive for Research in Archetypal Symbolism</a>
                 <ul>
-                    <li>Migrated legacy site to Drupal, modernizing the CMS structure.</li>
-                    <li>Enhanced site performance with caching and Cloudflare optimizations.</li>
-                    <li>Developed a custom research database integration for scholars.</li>
+                    <li>Migrated legacy site to Drupal.</li>
+                    <li>Improved speed and reliability with caching.</li>
                 </ul>
             </li>
             <li>
                 <a href="https://sacwaldorf.org" target="_blank">Sacramento Waldorf School</a>
                 <ul>
-                    <li>Revamped school website with a user-friendly WordPress theme.</li>
-                    <li>Added event management and calendar functionality.</li>
-                    <li>Improved mobile responsiveness and accessibility.</li>
+                    <li>Revamped site for better accessibility.</li>
+                    <li>Enhanced mobile responsiveness.</li>
                 </ul>
             </li>
             <li>
                 <a href="https://enchantmints.com" target="_blank">Enchantmints™ – Music Boxes</a>
                 <ul>
-                    <li>Implemented WooCommerce for seamless e-commerce functionality.</li>
-                    <li>Optimized site speed, reducing load times by 50%.</li>
-                    <li>Integrated automated inventory management and payment gateways.</li>
+                    <li>Implemented WooCommerce for seamless e-commerce.</li>
+                    <li>Optimized site speed, reducing load times significantly.</li>
                 </ul>
             </li>
             <li>
@@ -128,7 +149,6 @@
                 <ul>
                     <li>Designed a professional website with a focus on accessibility.</li>
                     <li>Developed a client intake form to streamline consultations.</li>
-                    <li>Secured site with SSL, regular backups, and malware scanning.</li>
                 </ul>
             </li>
         </ul>
