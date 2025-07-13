@@ -10,13 +10,15 @@
       max-width: 700px;
       margin: 40px auto;
       padding: 20px;
-      background-color: #f9f9f9;
-      color: #333;
+      background-color: #121212;
+      color: #e0e0e0;
       line-height: 1.6;
     }
-    h1 {
-      font-size: 1.6em;
-      margin-bottom: 0.5em;
+    a {
+      color: #80d8ff;
+    }
+    h1, h3 {
+      color: #ffffff;
     }
     ul {
       padding-left: 1.2em;
@@ -24,16 +26,51 @@
     li {
       margin-bottom: 0.5em;
     }
+    code {
+      background-color: #1e1e1e;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
     .caveats {
       margin-top: 2em;
-      background: #fff8dc;
+      background: #2a2a2a;
       padding: 1em;
       border-left: 5px solid #f90;
+    }
+    .tip-box {
+      background: #1e1e1e;
+      border: 1px solid #333;
+      padding: 1.5em;
+      border-radius: 10px;
+      max-width: 500px;
+      margin: 2em auto;
+      text-align: center;
+    }
+    .tip-box a {
+      display: inline-block;
+      font-weight: bold;
+      padding: 10px 20px;
+      margin: 10px 5px;
+      text-decoration: none;
+      border-radius: 6px;
+    }
+    .coffee {
+      background: #FFDD00;
+      color: #000;
+    }
+    .paypal {
+      background: #0070ba;
+      color: #fff;
+    }
+    .tip-note {
+      margin-top: 15px;
+      font-size: 0.95em;
     }
   </style>
 </head>
 <body>
-  <h1>Restore Copy All Urls Chrome Extention in Chrome 138 (Manual Workaround)</h1>
+  <h1>Restore Copy All Urls Chrome Extension in Chrome 138 (Manual Workaround)</h1>
 
   <p>As of Chrome version 138, Google has begun disabling extensions that use the older Manifest V2 format—including the popular <strong>Copy All Urls</strong> extension. If you're seeing a message like “This extension is no longer supported,” it means Chrome has automatically turned it off and blocked it from running.</p>
 
@@ -60,22 +97,19 @@
     </ul>
   </div>
 
-  <div style="background: #f9f9f9; border: 1px solid #ddd; padding: 1.5em; border-radius: 10px; max-width: 500px; margin: 2em auto; font-family: sans-serif; text-align: center;">
-  <h3 style="margin-top: 0;">Was this helpful? 💡</h3>
-  <p style="font-size: 1.1em;">You can say thanks with a small (or big!) tip below 💚</p>
+  <div class="tip-box">
+    <h3>Was this helpful? 💡</h3>
+    <p style="font-size: 1.1em;">You can say thanks with a small (or big!) tip below 💚</p>
 
-  <a href="https://coff.ee/johnkyle" target="_blank" style="display: inline-block; background: #FFDD00; color: #000; font-weight: bold; padding: 10px 20px; margin: 10px 5px; text-decoration: none; border-radius: 6px;">
-    ☕ Buy Me a Coffee
-  </a>
+    <a href="https://coff.ee/johnkyle" target="_blank" class="coffee">
+      ☕ Buy Me a Coffee
+    </a>
 
-  <a href="https://www.paypal.me/johnkyle4" target="_blank" style="display: inline-block; background: #0070ba; color: #fff; font-weight: bold; padding: 10px 20px; margin: 10px 5px; text-decoration: none; border-radius: 6px;">
-    💸 Tip via PayPal
-  </a>
+    <a href="https://www.paypal.me/johnkyle4" target="_blank" class="paypal">
+      💸 Tip via PayPal
+    </a>
 
-  <p style="margin-top: 15px; font-size: 0.95em;">Or Venmo me: <strong>@johnkylemusic</strong></p>
-</div>
-
-
-
+    <p class="tip-note">Or Venmo me: <strong>@johnkylemusic</strong></p>
+  </div>
 </body>
 </html>
