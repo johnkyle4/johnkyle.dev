@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restore Copy All Urls in Chrome 138</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    h1 {
+      font-size: 1.6em;
+      margin-bottom: 0.5em;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    li {
+      margin-bottom: 0.5em;
+    }
+    .caveats {
+      margin-top: 2em;
+      background: #fff8dc;
+      padding: 1em;
+      border-left: 5px solid #f90;
+    }
+  </style>
+</head>
+<body>
+  <h1>Restore Copy All Urls in Chrome 138 (Manual Workaround)</h1>
+
+  <p>As of Chrome version 138, Google has begun disabling extensions that use the older Manifest V2 format—including the popular <strong>Copy All Urls</strong> extension. If you're seeing a message like “This extension is no longer supported,” it means Chrome has automatically turned it off and blocked it from running.</p>
+
+  <p>Fortunately, there's still a workaround that allows you to manually reinstall and use Copy All Urls (and other Manifest V2 extensions) by loading them as unpacked developer extensions. This method works in Chrome 138 and may continue to work in future versions—though it comes with some caveats.</p>
+
+  <p>Here's how to bring Copy All Urls back in a few simple steps:</p>
+
+  <ul>
+    <li>Go to <a href="https://github.com/felixfbecker/copy-all-urls" target="_blank">https://github.com/felixfbecker/copy-all-urls</a></li>
+    <li>Click <strong>Code &gt; Download ZIP</strong></li>
+    <li>Unzip the folder somewhere on your computer</li>
+    <li>Open <code>chrome://extensions/</code> in Chrome</li>
+    <li>Toggle <strong>Developer Mode ON</strong> (top-right)</li>
+    <li>Click <strong>Load unpacked</strong></li>
+    <li>Select the folder you just unzipped</li>
+  </ul>
+
+  <div class="caveats">
+    <strong>Caveats:</strong>
+    <ul>
+      <li>Chrome will show a warning that “Developer mode is on”</li>
+      <li>You won’t get auto-updates – you'll have to repeat the process if you want new versions</li>
+      <li>These may stop working permanently once Google fully disables V2 in stable builds. Consider switching to Brave or Firefox.</li>
+    </ul>
+  </div>
+</body>
+</html>
